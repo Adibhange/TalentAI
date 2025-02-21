@@ -1,4 +1,3 @@
-"use client";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,8 +15,10 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import GrowthTools from "@/data/growthTools";
+import { checkUser } from "@/lib/checkUser";
 
-const Header = () => {
+const Header = async () => {
+  await checkUser();
   return (
     <header className="bg-background/80 fixed top-0 z-50 w-full backdrop-blur-md">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
