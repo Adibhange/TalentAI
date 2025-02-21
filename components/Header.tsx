@@ -35,7 +35,7 @@ const Header = () => {
           <SignedIn>
             <Link href="/dashboard">
               <Button variant="outline">
-                <LayoutDashboardIcon size={16}></LayoutDashboardIcon>
+                <LayoutDashboardIcon className="h-4 w-4"></LayoutDashboardIcon>
                 <span className="hidden md:block">Industry Trends</span>
               </Button>
             </Link>
@@ -43,16 +43,16 @@ const Header = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button>
-                  <SparklesIcon size={16}></SparklesIcon>
+                  <SparklesIcon className="h-4 w-4"></SparklesIcon>
                   <span className="hidden md:block">Growth Tools</span>
-                  <ChevronDown size={16}></ChevronDown>
+                  <ChevronDown className="h-4 w-4"></ChevronDown>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {GrowthTools.map((tool) => (
                   <DropdownMenuItem key={tool.name}>
                     <Link href={tool.href} className="flex items-center gap-2">
-                      <tool.icon size={16}></tool.icon>
+                      <tool.icon className="h-4 w-4"></tool.icon>
                       <span>{tool.name}</span>
                     </Link>
                   </DropdownMenuItem>
@@ -64,7 +64,7 @@ const Header = () => {
           <SignedOut>
             <SignInButton>
               <Button variant="secondary">
-                <LogInIcon size={16}></LogInIcon>
+                <LogInIcon className="h-4 w-4"></LogInIcon>
                 <span>Sign In</span>
               </Button>
             </SignInButton>

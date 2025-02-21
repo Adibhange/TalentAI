@@ -1,3 +1,16 @@
+import CTA from "@/components/CTA";
+import Features from "@/components/Features";
+import HeroSection from "@/components/HeroSection";
+import HowItWorks from "@/components/HowItWorks";
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <div className="grid-background"></div>
+      <HeroSection />
+      <Features />
+      <HowItWorks />
+      <CTA />
+    </>
+  );
 }
