@@ -76,7 +76,7 @@ model IndustryInsight {
   users         User[]
   
   // Salary data
-  salaryRanges  Json[]    // Array of { role: string, min: float, max: float, median: float, location: string? }
+  salaryRanges  SalaryRange[]
   
   // Industry trends
   growthRate    Float     // Industry growth rate
@@ -94,6 +94,17 @@ model IndustryInsight {
   nextUpdate    DateTime  // Scheduled update time
 
   @@index([industry])
+}
+
+model SalaryRange {
+  id       String  @id @default(cuid())
+  role     String
+  min      Float
+  max      Float
+  median   Float
+  location String
+  industryInsightId String
+  industryInsight   IndustryInsight @relation(fields: [industryInsightId], references: [id])
 }
 
 enum DemandLevel{
