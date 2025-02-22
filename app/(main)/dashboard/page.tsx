@@ -11,7 +11,6 @@ const Dashboard = async () => {
   }
 
   const insights = await getIndustryInsights();
-  console.log(insights);
   return (
     <div className="container mx-auto">
       <DashboardView insights={insights} />
