@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
-import Quiz from "../_component/Quiz";
+import Quiz from "../_components/Quiz";
 
 const MockInterview = () => {
   return (

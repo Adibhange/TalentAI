@@ -1,7 +1,7 @@
 import { getAssessments } from "@/actions/interviewPrep";
-import Stats from "./_component/Stats";
-import PerformanceChart from "./_component/PerformanceChart";
-import QuizList from "./_component/QuizList";
+import Stats from "./_components/Stats";
+import PerformanceChart from "./_components/PerformanceChart";
+import QuizList from "./_components/QuizList";
 
 const InterviewPrep = async () => {
   const assessments = await getAssessments();
@@ -19,6 +19,6 @@ const InterviewPrep = async () => {
       </div>
     </>
   );
-}
+};
 
 export default InterviewPrep;
